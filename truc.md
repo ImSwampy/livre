@@ -133,14 +133,73 @@ Horloge --- rythme de travail ---> coeur --- instructions ---> threads (si Hyper
 
 ##### Threads
 
-Les threads sont souvent utilisés dans des applications ou projets a charge lourde, qui ont un besoin critique de performance ou de parallélisme dans les taches effectuées (simultanées).
-En programmation, on affecte souvent des fonctions complexe ou longue au threads, afin de ne pas ralentir le programme entier.
+Les threads sont souvent utilisés dans des applications ou projets à charge lourde, qui ont un besoin critique de performance ou de parallélisme dans les taches effectuées (simultanées).
+En programmation, on affecte fréquemment des fonctions complexes ou longue aux threads, afin de ne pas ralentir le programme entier.
 Par exemple, en Python :
 
+Considérons cette fonction
 ```python
-
+def prime_numbers(n: int, start: int = 2) -> list[int]:
+    # éviter les erreurs de paramètres
+    if n <= 1:
+        print("Erreur, chiffre trop petit")
+        return []
+    if start < 2:
+        print("Erreur, début trop petit")
+        return []
+    
+    # le "coeur" de la fonction
+    result: list[int] = [] # le resultat qu'on renverra 
+    for i in range(start, n):
+        for j in range(start, i):
+            if (i % j) == 0: # si le nombre est un multiple entier autre que 1 ou le même
+                break
+        else:
+            result.append(i) # ajouter ce nombre au resultat
+    return result
 ```
 
+Cette fonction renvoi une liste des nombres premiers compris entre `start` et `n`. Elle n'est pas optimisé, et peut prendre beaucoup de temps a éxecuter lors de paramètre plus élevés.
+
+```python
+    goal: int = 100_000 # le nombre maximal
+
+    curr = time.time() # le temps avant le lancement des fonctions
+    prime_numbers(goal) # les nombres premier compris entre 2 et 100,000
+    print(time.time() - curr) # affiche le temps actuelle - celui avant la fonction afin de déterminé son temps d'éxectution
+```
+```
+17.05051851272583
+```
+Soit 17 secondes pour trouver tous les nombres premiers de 2 à 100,000.
+
+Maintenant, éxecutons cette fonction 2 fois, simultanément.
+
+```python
+    goal: int = 100_000 # le nombre maximal
+
+    thread1 = threading.Thread(target=prime_numbers, args=(goal//2, 2)) # le 1er thread executera la fonction de 2 à 50,000
+    thread2 = threading.Thread(target=prime_numbers, args=(goal - goal//2, goal//2)) # le deuxième executera la fonction de 50,000 à 100,000
+
+    curr = time.time() # le temps avant le lancement des fonctions
+    
+    # lancer les threads
+    thread1.start() 
+    thread2.start()
+
+    # attendre la fin de leurs opérations
+    thread1.join()
+    thread2.join()
+
+    print(time.time() - curr) # le temps entre le lancement des fonctions et leurs fin
+```
+```
+4.005001544952393
+```
+
+Comme on peut le constater, le fait d'avoir répartit cette fonctions sur 2 threads simultanés donne un résultat bien plus rapidement que sans le multithreading.
+
+Le code ci-dessus est une illustration seulement, il n'est pas nécessaire de comprendre entièrement le code, mais seulement de comprendre l'importance de l'utilisation de threads.
 
 
 ## 1.2. 

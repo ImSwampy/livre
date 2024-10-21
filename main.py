@@ -27,8 +27,8 @@ if __name__ == "__main__":
     prime_numbers(goal)
     print(time.time() - curr)
 
-    thread1 = threading.Thread(target=prime_numbers, args=(goal//2, 2), daemon=False)
-    thread2 = threading.Thread(target=prime_numbers, args=(goal - goal//2, goal//2), daemon=False)
+    thread1 = threading.Thread(target=prime_numbers, args=(goal//2, 2))
+    thread2 = threading.Thread(target=prime_numbers, args=(goal - goal//2, goal//2))
 
     curr = time.time()
 
