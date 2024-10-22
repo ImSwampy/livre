@@ -9,13 +9,17 @@
     * [1.1.1. Les composants](#les-composants)
     * [1.1.2. Mémoire RAM](#mémoire-ram)
     * [1.1.3. CPU](#processeur)
-      * 1.1.3.1. Threads 
-      * 1.1.3.2. Cache
-    * 1.1.4. GPU
-      * 1.1.4.1. Mémoire
-      * 1.1.4.2. Traitement des données
-  * 1.2. Python et ses applications
+      * [1.1.3.1. Threads](#threads)
+      * [1.1.3.2. Cache](#cache)
+    * [1.1.4. GPU](#carte-graphique)
+      * [1.1.4.1. Traitement des données](#traitement-des-données)
+  * [1.2. Python et ses applications](#12-python-et-ses-applications)
+    * [1.2.1. Les domaines adaptés](#les-domaines-adaptés)
+    * [1.2.1. Les domaines non-adaptés](#les-domaines-non-adaptés)
   * 1.3. Python et son environnement
+    * 1.3.1. Package Manager
+    * 1.3.2. Librairies de base
+    * 1.3.3. Conda
   * 1.4. Langage interprété vs. compilé vs. Byte-code
   * 1.5. Programmation "Static" vs. "Dynamic"
   * 1.6. L'algorithmie et les mathématiques dans la programmation
@@ -25,8 +29,11 @@
   * 2.1. IDE vs Editeur de texte
   * 2.2. Les IDEs
   * 2.3. Les Editeurs de texte
-  * 2.4. Les débuggeurs
+  * 2.4. Les debuggers
   * 2.5. Environnement Python
+    * 2.5.1. Pipenv
+    * 2.5.2. Virtualenv
+    * 2.5.3. Conda env
   * 2.6. Le Package Manager
 
 3. ### Les bases
@@ -77,7 +84,7 @@ ___
 
 ## 1.1. Fonctionnement d'un ordinateur.
 
-#### Les composants
+### Les composants
 
 Un ordinateur est une machine complexe, qui, a l'aide de calculs, nous aident au quotidien. Que ce soit au travaille, a l'école, à la bibliothèque, ou que vous vouliez acheter un article en ligne, ou même regarder une vidéo, vous utiliserez un ordinnateur.
 
@@ -95,7 +102,7 @@ Pour commencer, parlons des composants :
 
 
 
-#### Mémoire RAM
+### Mémoire RAM
 
 La mémoire RAM est composé de 2 éléments pour chaque emplacement : l'`adresse` et la `valeur`. En réalité, dans beaucoup de language de programmation, si ce n'est tous, la mémoire utilisé est une `mémoire virtuelle`, qui sera entièrement gérée par le système d'exploitation; celui-ci va alors décider de l'organisation dans la `mémoire physique`. Ce processus permet d'éviter les erreurs de mémoire (exemple : 2 programme qui veulent accéder a la même adresse), et donc ajouté une couche de protection pour l'utilisateur et les applications elles même. 
 
@@ -117,7 +124,7 @@ Alors qu'en réalité :
 valeur(0x73B1FF) -> physique(0x093F82) -> valeur(01001001) en chiffre -> 73
 ```
 
-#### Processeur
+### Processeur
 
 Comme vu précédemment, le processeur est constitué d'une horloge et de coeurs, qui sont eux même composé de threads.
 On peut imaginer un processeur tel une entreprise :
@@ -162,6 +169,8 @@ def prime_numbers(n: int, start: int = 2) -> list[int]:
 Cette fonction renvoi une liste des nombres premiers compris entre `start` et `n`. Elle n'est pas optimisé, et peut prendre beaucoup de temps a éxecuter lors de paramètre plus élevés.
 
 ```python
+    import time
+
     goal: int = 100_000 # le nombre maximal
 
     curr = time.time() # le temps avant le lancement des fonctions
@@ -176,6 +185,9 @@ Soit 17 secondes pour trouver tous les nombres premiers de 2 à 100,000.
 Maintenant, éxecutons cette fonction 2 fois, simultanément.
 
 ```python
+    import time
+    import threading    
+
     goal: int = 100_000 # le nombre maximal
 
     thread1 = threading.Thread(target=prime_numbers, args=(goal//2, 2)) # le 1er thread executera la fonction de 2 à 50,000
@@ -197,9 +209,58 @@ Maintenant, éxecutons cette fonction 2 fois, simultanément.
 4.005001544952393
 ```
 
-Comme on peut le constater, le fait d'avoir répartit cette fonctions sur 2 threads simultanés donne un résultat bien plus rapidement que sans le multithreading.
+Comme on peut le constater, le fait d'avoir réparti cette fonction sur 2 threads simultanés donne un résultat bien plus rapidement que sans le multithreading.
 
-Le code ci-dessus est une illustration seulement, il n'est pas nécessaire de comprendre entièrement le code, mais seulement de comprendre l'importance de l'utilisation de threads.
+Le code ci-dessus est une illustration seulement, il n'est pas nécessaire de comprendre entièrement le code, mais uniquement de comprendre l'importance de l'utilisation de threads.
+
+### Cache
+
+Le cache constitue la mémoire inclut directement dans le processeur. Du fait de sa proximité avec les coeurs, il est bien plus rapide que la RAM. Les données dessus ne sont rarement chargé plus de quelques millisecondes, voire quelques microsecondes. C'est ici qu'atterrissent les données de la RAM demandée par un programme, telle une sorte de "fil d'attente".
+
+### Carte Graphique
+
+La carte graphique est un composant essentiel, et fréquemment utilisé, mais n'est pas indispensable. Elle permet d'afficher l'interface de l'ordinateur, dans le plus courant des cas. Elle est aussi utilisé pour sa puissance de calculs intense. Elle n'est pas requise dans les serveurs web par exemple, car seulement l'envoie et la récéption de données est utile. 
+
+De plus en plus, les cartes graphiques sont considéré comme un des composants le plus important, principalement a cause du secteur du jeu vidéo ou encore de la crypto-monnaie.
+
+Un GPU en lui-même est une sorte d'ordinateur compacte, en effet, elle possède une carte principale, similaire a une carte mère, BEAUCOUP de coeurs (2560 pour une NVIDIA GTX 1080), tels les processeurs, et une mémoire.
+Elles sont designé pour le calcul intensif simultané, grace a leurs milliers de coeurs, malgré leurs faibles performances.
+
+### Traitement des données
+
+Généralement, les données utilisées par la carte graphique sont fait de matrices :
+
+```
+┌ 1  2  7  8 ┐
+| 3  8  9  0 |
+| 5  7  3  2 |
+└ 9  0  3  0 ┘
+```
+
+Telle celle-ci dessus, et peut subir de complexe calculs comme la rotation, addition, multiplication, et division de matrices, ou encore même des calculs de vecteurs. 
+
+## 1.2. Python et ses applications
+
+### Les domaines adaptés
+
+Le langage Python est très populaire dans de multiples secteurs, et continue de croitre au fil des années. Du fait de sa simplicité, popularité et de sa grande diversité de librairies, il est commun de retrouver Python dans :
+ * l'IA et la science des données : les libraries d'IA et de _Machine Learning_ (a.k.a. l'apprentissage des machines) sont faites en C++ du fait de sa rapidité, mais son ré-adapté en Python, et compose la plupart des grandes IA tel que Copilot ou ChatGPT.
+ * le web, plus spécifiquement le _backend_ soit le côté serveur. Il est utilisé pour des sites modérément grands, et permet une approche simple et rapide de la conception d'un serveur web.
+ * l'apprentissage, beaucoup d'école (comme la France) apprennent aux élèves les principes de l'algorithmie via Python, grace a sa simplicité et sa syntaxe très "humaine".
+ * les applications, de taille petite pour la plupart, tel qu'un générateur de mot de passe, ou un _pierre, feuille, ciseaux_.
+
+### Les domaines non-adaptés
+
+Cependant, Python a tendance à être lent comparé à d'autre langage tel que _Java_, _C_, _C++_ ou _Go_. Cette grande faiblesse fait que Python est moins adapté dans :
+ * le secteur du jeu vidéo. Les jeux vidéos en 3D demande beaucoup de puissance de calcul afin de générer la lumière, sa refraction, la physique, etc.
+ * les applications hautes performances, telles que les applications de montages photo et vidéo. En revanche, certaines parties de ces applications sont codé en Python, car elle ne nécessite pas de puissance de calcul.
 
 
-## 1.2. 
+## 1.3. Python et son environnement
+
+### Le Package Manager
+
+Le package manager est un terme anglais, qui désigne un outil permettant entre autre l'installation de bibliothèque ou encore de mettre en place un environnement local au projet.
+Le package manager officiel de Python s'appelle `pip`.
+L'installation de `packets` (des bibliothèques) nécessite une connexion internet, et ont plusieurs répertoire d'installation par défaut.
+Il est possible de créer un
