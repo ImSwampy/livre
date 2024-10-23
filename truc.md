@@ -293,3 +293,13 @@ Dans la [liste officiel](https://docs.python.org/3.12/py-modindex.html) des `Sta
  * `random` : pour les opérations aléatoires.
  * `sockets` : pour la gestion de socket web.
 
+Les librairies externes les plus courantes dépendent de leurs cas d'utilisation :
+ * REST API et serveurs Web :
+   * `Flask` : une bibliothèque solide pour les projet de petite a grande échelle. 
+   * `Django` : spécifiquement prévu pour les plus gros projet, ayant des règles plus strictes et complexes. 
+   * `FastAPI` : adapté à de petits projets, son manque de fonctionnalitées est compenser par ses hautes performances. 
+ * IA et Science des Données :
+   * `numpy` : large librarie permettant de faire des array à deux dimension, des formule de maths complexe, et autre. (est rarement utilisé seul). 
+   * `pytorch`
+   * `tensorflow`
+
