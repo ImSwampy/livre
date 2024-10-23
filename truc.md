@@ -300,6 +300,7 @@ Les librairies externes les plus courantes dépendent de leurs cas d'utilisation
    * `FastAPI` : adapté à de petits projets, son manque de fonctionnalitées est compenser par ses hautes performances. 
  * IA et Science des Données :
    * `numpy` : large librarie permettant de faire des array à deux dimension, des formule de maths complexe, et autre. (est rarement utilisé seul). 
-   * `pytorch`
-   * `tensorflow`
+   * `pytorch` : bibliothèque pour le _Machine Learning_. Accessible au débutant mais tout de même puissant. 
+   * `tensorflow` : équivalent de `pytorch` mais plus complex et professionnel. 
+   * `scipy` : complète `numpy`.
 
