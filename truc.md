@@ -268,12 +268,28 @@ Ces packets (ou _packages_) sont fait en Python, et permettent au développeur d
 
 Plusieurs moyens existent afin d'utiliser `pip`, voici une liste complète :
 ```shell
-pip ...
-pip3 ...
-python -m pip ...
-python -m pip3 ...
+pip <...args>
+pip3 <...args>
+python -m pip <...args>
+python -m pip3 <...args>
 ```
 
-Véerifiez bien que Python et (si possible) `pip` soit dans les variables systeme, ou `%PATH%`
+Vérifiez bien que Python et (si possible) `pip` soit dans les variables d'environnement système, ou `%PATH%`, afin que la commande puisse être utilisée. Vous pouvez aussi utiliser la commande directement à partir de l'éxecutable `pip` à partir de son répertoire comme ceci : ```<chemin_vers_pip> <commande_pip>```, par exemple ```"C:\python312\Scripts\pip.exe" pip --version```.
 
-### SAluut
+### Les librairies de bases
+
+Python à par défaut une vingtaine de `package`, qui rassemble un large éventail de fonctionnalités.
+Dans la [liste officiel](https://docs.python.org/3.12/py-modindex.html) des `Standard Library` de python, les plus populaires sont :
+ * `datetime` : manipulation de dates.
+ * `json` : manipulation d'objets et fichier json.
+ * `asyncio` : fonctions asynchrone et autre.
+ * `threading` : pour le multi-threading.
+ * `typing` : pour la gestion de type, et la programmation statique.
+ * `math` : pour les fonctions mathématiques telles que la racine carrée.
+ * `requests` : recevoir et envoyer des données par HTTP.
+ * `hashlib` : fonctions de hashing.
+ * `os` : fonctionnalités du système d'exploitation.
+ * `sys` : fonctionnalité du système.
+ * `random` : pour les opérations aléatoires.
+ * `sockets` : pour la gestion de socket web.
+
