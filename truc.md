@@ -16,11 +16,17 @@
   * [1.2. Python et ses applications](#12-python-et-ses-applications)
     * [1.2.1. Les domaines adaptés](#les-domaines-adaptés)
     * [1.2.1. Les domaines non-adaptés](#les-domaines-non-adaptés)
-  * 1.3. Python et son environnement
-    * 1.3.1. Package Manager
-    * 1.3.2. Librairies de base
-    * 1.3.3. Conda
-  * 1.4. Langage interprété vs. compilé vs. Byte-code
+  * [1.3. Python et son environnement](#13-python-et-son-environnement)
+    * [1.3.1. Package Manager](#le-package-manager)
+    * [1.3.2. Les librairies](#les-librairies)
+      * [1.3.2.1. Les librairies standards](#les-libraries-standards)
+      * [1.3.2.2. Les librairies populaires](#les-libraries-populaires)
+    * [1.3.3. Conda](#conda)
+  * [1.4. Langage interprété vs. compilé vs. Byte-code]()
+    * 1.4.1. Langage Interprété
+    * 1.4.2. Langage Compilé
+    * 1.4.3. Langage Byte-code
+    * 1.4.4. Comparaison
   * 1.5. Programmation "Static" vs. "Dynamic"
   * 1.6. L'algorithmie et les mathématiques dans la programmation
   * 1.7. Les conventions
@@ -276,10 +282,11 @@ python -m pip3 <...args>
 
 Vérifiez bien que Python et (si possible) `pip` soit dans les variables d'environnement système, ou `%PATH%`, afin que la commande puisse être utilisée. Vous pouvez aussi utiliser la commande directement à partir de l'éxecutable `pip` à partir de son répertoire comme ceci : ```<chemin_vers_pip> <commande_pip>```, par exemple ```"C:\python312\Scripts\pip.exe" pip --version```.
 
-### Les librairies de bases
+### Les librairies
 
-Python à par défaut une vingtaine de `package`, qui rassemble un large éventail de fonctionnalités.
-Dans la [liste officiel](https://docs.python.org/3.12/py-modindex.html) des `Standard Library` de python, les plus populaires sont :
+#### Les libraries standards
+
+Python à par défaut une vingtaine de `package`, qui rassemble un large éventail de fonctionnalités. Dans la [liste officiel](https://docs.python.org/3.12/py-modindex.html) des `Standard Library` de python, les plus populaires sont :
  * `datetime` : manipulation de dates.
  * `json` : manipulation d'objets et fichier json.
  * `asyncio` : fonctions asynchrone et autre.
@@ -293,14 +300,54 @@ Dans la [liste officiel](https://docs.python.org/3.12/py-modindex.html) des `Sta
  * `random` : pour les opérations aléatoires.
  * `sockets` : pour la gestion de socket web.
 
+#### Les libraries populaires
+
 Les librairies externes les plus courantes dépendent de leurs cas d'utilisation :
  * REST API et serveurs Web :
-   * `Flask` : une bibliothèque solide pour les projet de petite a grande échelle. 
-   * `Django` : spécifiquement prévu pour les plus gros projet, ayant des règles plus strictes et complexes. 
-   * `FastAPI` : adapté à de petits projets, son manque de fonctionnalitées est compenser par ses hautes performances. 
+   * `Flask` : une bibliothèque solide pour les projets de petite a grande échelle. 
+   * `Django` : spécifiquement prévu pour les plus gros projets, ayant des règles plus strictes et complexes. 
+   * `FastAPI` : adapté à de petits projets, son manque de fonctionnalités est compensé par ses hautes performances. 
  * IA et Science des Données :
-   * `numpy` : large librarie permettant de faire des array à deux dimension, des formule de maths complexe, et autre. (est rarement utilisé seul). 
-   * `pytorch` : bibliothèque pour le _Machine Learning_. Accessible au débutant mais tout de même puissant. 
+   * `numpy` : large librarie permettant de faire des array à deux dimensions, des formules de maths complexes, et autre. (est rarement utilisé seul). 
+   * `pytorch` : bibliothèque pour le _Machine Learning_. Accessible au débutant, mais tout de même puissant. 
    * `tensorflow` : équivalent de `pytorch` mais plus complex et professionnel. 
    * `scipy` : complète `numpy`.
+ * Bases de données
+   * `sqlite3` : pour SQLite.
+   * `psycopg2` : pour PostGreSQL.
+   * `pymysql` : pour MySQL.
+   * `sqlalchemy` : une grande variété de base de données SQL.
+   * `redis` : pour Redis (noSQL).
+   * `pymongo` : pour MongoDB.
+ * Les jeux
+   * `pygame` : le plus populaire, permet des jeux simples.
+   * `pyopengl` : utilise l'API d'OpenGL et se concentre sur les objets 3D.
+
+
+### Conda
+
+Conda est un `interpreter` Python qui cible les développeurs du secteur de l'Intelligence Artificiel. Il vient avec son propre environnement appelé `Conda env`, et à de nombreuses librairies installées par défaut. Il possède une gestion des fichiers hors normes qui isole les projets les uns des autres, et réduit drastiquement les erreurs de version d'outils entre plusieurs projets.
+Conda amène un certain nombre d'outils, mais en plus supporte plusieurs langages de programmation telle que _R_, _C++_, et bien plus encore.
+
+
+## 1.4. Langage interprété vs. compilé vs. Byte-code
+
+### Langage Interprété
+
+Un langage de programmation interprété est un langage qui ne subit pas de transformation entre le code source et la sortie. Ainsi, il est dépendant de l'`interpreter`, qui va, comme son nom l'indique, interpréter le code et l'exécuté.
+
+Pour imager, prenons un message à faire passer à quelqu'un.
+
+La personne aimerait communiquer à sa grande mère Chinoise que Noël ne se passera pas chez lui.
+Cette personne va donc envoyer un SMS, en utilisant un logiciel de traduction peu performant. Il transmettra l'information rapidement, mais avec des erreurs et peu de précision. De plus, l'opérateur réseaux doit pouvoir supporter les conversations inter-continent.
+L'information est ainsi simple d'accès, imprécise et dépendante de l'opérateur réseau.
+
+L'avantage des langages de programmation interprété se résume généralement sur le confort d'utilisation. Ceux-ci ont tendance à être plus simple à apprendre et à manier, mais sont plus lent à execute ou à `debugger` car le programme est exécuté au fur et à mesure, sans savoir l'instruction suivante. Il ce peut donc que votre programme ait une erreur après plusieurs minutes de lancement, car une instruction n'avait pas été atteinte jusqu'alors.
+A noté que ces langages ont un accès très limité sur l'infrastructure de l'ordinateur, puisqu'une majeure partie est gérée par l'interpreter. Cela aussi fait d'eux des langages lents et peu performants à cause du passage à travers l'interpreter. 
+
+De l'exemple de langage interprété sont _Javascript_, _PHP_, et _Ruby_.
+
+### Langage compilé
+
+Les langages compilés passent à travers un processus en plusieurs étapes, qui va décortiquer le code et le transformer en binaire, puis en executable.
 
