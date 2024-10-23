@@ -263,4 +263,17 @@ Cependant, Python a tendance à être lent comparé à d'autre langage tel que _
 Le package manager est un terme anglais, qui désigne un outil permettant entre autre l'installation de bibliothèque ou encore de mettre en place un environnement local au projet.
 Le package manager officiel de Python s'appelle `pip`.
 L'installation de `packets` (des bibliothèques) nécessite une connexion internet, et ont plusieurs répertoire d'installation par défaut.
-Il est possible de créer un
+Il est possible de créer un environnement local dans notre projet, ce qui permettra à nos libraries d'être utilisable seulement par ce projet.
+Ces packets (ou _packages_) sont fait en Python, et permettent au développeur d'utiliser des fonctions ou classe déjà existante.
+
+Plusieurs moyens existent afin d'utiliser `pip`, voici une liste complète :
+```shell
+pip ...
+pip3 ...
+python -m pip ...
+python -m pip3 ...
+```
+
+Véerifiez bien que Python et (si possible) `pip` soit dans les variables systeme, ou `%PATH%`
+
+### SAluut
