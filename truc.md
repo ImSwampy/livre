@@ -38,7 +38,7 @@
   * 2.2. Les IDEs
   * 2.3. Les éditeurs de texte
   * 2.4. Les debuggers
-  * 2.1. IDE vs éditeur de texte
+  * 2.1. IDE vs. éditeur de texte
   * 2.5. Environnement Python
     * 2.5.1. Pipenv
     * 2.5.2. Virtualenv
@@ -511,4 +511,17 @@ class Mot_Bonjour: ...
 
 Aucun mot définit par l'utilisateur tel que la nomination des variables, classes, et fonctions, ont interdiction de commencé par un chiffre, de contenir des espaces ou caractère spéciaux tel que les accents, les symboles monétaires, etc.
 
+---
+
 # 2. Les outils
+
+## Les éditeurs de texte
+
+Les éditeurs de texte sont présents sur quasiment n'importe quel ordinateur, et peuvent être très simpliste (NotePad sur windows), ou avancé, adapté pour la programmation avec des fonctionnalités supplémentaires.
+
+
+## Les IDEs
+
+## Les debuggers
+
+## IDE vs. éditeur de texte
