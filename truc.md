@@ -4,7 +4,7 @@
 
 ## Sommaire ##
 
-1. ### [Introduction et concepts](#1-introduction-et-concepts)
+### [1. Introduction et concepts](#1-introduction-et-concepts)
   * [1.1. Fonctionnement d'un ordinateur](#11-fonctionnement-dun-ordinateur)
     * [1.1.1. Les composants](#les-composants)
     * [1.1.2. Mémoire RAM](#mémoire-ram)
@@ -22,27 +22,30 @@
       * [1.3.2.1. Les librairies standards](#les-libraries-standards)
       * [1.3.2.2. Les librairies populaires](#les-libraries-populaires)
     * [1.3.3. Conda](#conda)
-  * [1.4. Langage interprété vs. compilé vs. Byte-code]()
-    * 1.4.1. Langage Interprété
-    * 1.4.2. Langage Compilé
-    * 1.4.3. Langage Byte-code
-    * 1.4.4. Comparaison
-  * 1.5. Programmation "Static" vs. "Dynamic"
-  * 1.6. L'algorithmie et les mathématiques dans la programmation
-  * 1.7. Les conventions
+  * [1.4. Langage interprété vs. compilé vs. Byte-code](#14-langage-interprété-vs-compilé-vs-byte-code)
+    * [1.4.1. Langage Interprété](#langage-interprété)
+    * [1.4.2. Langage Compilé](#langage-compilé)
+    * [1.4.3. Langage Byte-code](#langage-byte-code)
+    * [1.4.4. Comparaison](#comparaison)
+  * [1.5. Types statiques et Types dynamiques](#15-types-statiques-vs-types-dynamiques)
+    * [1.5.1. Types statiques](#types-statiques)
+    * [1.5.2. Types dynamiques](#types-dynamiques)
+    * [1.5.3. Conclusion sur les types](#conclusion-sur-les-types)
+  * [1.6. L'algorithmie et les mathématiques dans la programmation](#16-lalgorithmie-et-les-mathématiques-dans-la-programmation)
+  * [1.7. Les conventions](#17-les-conventions)
 
-2. ### Les outils
-  * 2.1. IDE vs Editeur de texte
+### [2. Les outils](#2-les-outils)
   * 2.2. Les IDEs
-  * 2.3. Les Editeurs de texte
+  * 2.3. Les éditeurs de texte
   * 2.4. Les debuggers
+  * 2.1. IDE vs éditeur de texte
   * 2.5. Environnement Python
     * 2.5.1. Pipenv
     * 2.5.2. Virtualenv
     * 2.5.3. Conda env
   * 2.6. Le Package Manager
 
-3. ### Les bases
+### 3. Les bases
   * 3.1. Les notations / particularitées syntaxique
   * 3.2. Les variables et ses types
   * 3.3. Les commentaires
@@ -59,7 +62,7 @@
   * 3.7. Les classes
 - __Projet : créé une carte d'identité__
 
-4. ### Python dans son ensemble
+### 4. Python dans son ensemble
   * 4.1. L'importation de library
   * 4.2. Les library de base
   * 4.3. L'aléatoire
@@ -72,7 +75,7 @@
     * 4.7.3. Polymorphisme
 - __Projet : créer un fichier d'identité avancé__
 
-5. ### Python avancé : plongé dans le threading, l'asynchrone et le web
+### 5. Python avancé : plongé dans le threading, l'asynchrone et le web
   * 5.1. Les library web
   * 5.2. Le front-end vs. back-end
   * 5.3. L'API
@@ -175,13 +178,13 @@ def prime_numbers(n: int, start: int = 2) -> list[int]:
 Cette fonction renvoi une liste des nombres premiers compris entre `start` et `n`. Elle n'est pas optimisé, et peut prendre beaucoup de temps a éxecuter lors de paramètre plus élevés.
 
 ```python
-    import time
+import time
 
-    goal: int = 100_000 # le nombre maximal
+goal: int = 100_000 # le nombre maximal
 
-    curr = time.time() # le temps avant le lancement des fonctions
-    prime_numbers(goal) # les nombres premier compris entre 2 et 100,000
-    print(time.time() - curr) # affiche le temps actuelle - celui avant la fonction afin de déterminé son temps d'éxectution
+curr = time.time() # le temps avant le lancement des fonctions
+prime_numbers(goal) # les nombres premier compris entre 2 et 100,000
+print(time.time() - curr) # affiche le temps actuelle - celui avant la fonction afin de déterminé son temps d'éxectution
 ```
 ```
 17.05051851272583
@@ -191,25 +194,25 @@ Soit 17 secondes pour trouver tous les nombres premiers de 2 à 100,000.
 Maintenant, éxecutons cette fonction 2 fois, simultanément.
 
 ```python
-    import time
-    import threading    
+import time
+import threading    
 
-    goal: int = 100_000 # le nombre maximal
+goal: int = 100_000 # le nombre maximal
 
-    thread1 = threading.Thread(target=prime_numbers, args=(goal//2, 2)) # le 1er thread executera la fonction de 2 à 50,000
-    thread2 = threading.Thread(target=prime_numbers, args=(goal - goal//2, goal//2)) # le deuxième executera la fonction de 50,000 à 100,000
+thread1 = threading.Thread(target=prime_numbers, args=(goal//2, 2)) # le 1er thread executera la fonction de 2 à 50,000
+thread2 = threading.Thread(target=prime_numbers, args=(goal - goal//2, goal//2)) # le deuxième executera la fonction de 50,000 à 100,000
 
-    curr = time.time() # le temps avant le lancement des fonctions
-    
-    # lancer les threads
-    thread1.start() 
-    thread2.start()
+curr = time.time() # le temps avant le lancement des fonctions
 
-    # attendre la fin de leurs opérations
-    thread1.join()
-    thread2.join()
+# lancer les threads
+thread1.start() 
+thread2.start()
 
-    print(time.time() - curr) # le temps entre le lancement des fonctions et leurs fin
+# attendre la fin de leurs opérations
+thread1.join()
+thread2.join()
+
+print(time.time() - curr) # le temps entre le lancement des fonctions et leurs fin
 ```
 ```
 4.005001544952393
@@ -218,6 +221,7 @@ Maintenant, éxecutons cette fonction 2 fois, simultanément.
 Comme on peut le constater, le fait d'avoir réparti cette fonction sur 2 threads simultanés donne un résultat bien plus rapidement que sans le multithreading.
 
 Le code ci-dessus est une illustration seulement, il n'est pas nécessaire de comprendre entièrement le code, mais uniquement de comprendre l'importance de l'utilisation de threads.
+
 
 ### Cache
 
@@ -236,12 +240,14 @@ Elles sont designé pour le calcul intensif simultané, grace a leurs milliers d
 
 Généralement, les données utilisées par la carte graphique sont fait de matrices :
 
-```
-┌ 1  2  7  8 ┐
-| 3  8  9  0 |
-| 5  7  3  2 |
-└ 9  0  3  0 ┘
-```
+$$
+\begin{bmatrix}
+1 & 2 & 3 \\
+4 & 5 & 6 \\
+7 & 8 & 9
+\end{bmatrix}
+$$
+
 
 Telle celle-ci dessus, et peut subir de complexe calculs comme la rotation, addition, multiplication, et division de matrices, ou encore même des calculs de vecteurs. 
 
@@ -266,7 +272,9 @@ Cependant, Python a tendance à être lent comparé à d'autre langage tel que _
 
 ### Le Package Manager
 
-Le package manager est un terme anglais, qui désigne un outil permettant entre autre l'installation de bibliothèque ou encore de mettre en place un environnement local au projet.
+Le package manager est un terme anglais, 
+qui désigne un outil permettant entre autre l'installation de bibliothèque
+ou encore de mettre en place un environnement local au projet.
 Le package manager officiel de Python s'appelle `pip`.
 L'installation de `packets` (des bibliothèques) nécessite une connexion internet, et ont plusieurs répertoires d'installation par défaut.
 Il est possible de créer un environnement local dans notre projet, ce qui permettra à nos libraries d'être utilisable seulement par ce projet.
@@ -369,3 +377,138 @@ Il dessine chaque détail sur une feuille.
 Ensuite, une fois que tout est prêt, les ouvriers suivent ces plans pour construire la maison en une seule fois. 
 Dans un langage compilé, le code est d'abord traduit entièrement en langage machine (les plans complets), 
 puis exécuté par l'ordinateur._
+
+> &#8505;&#65039; &nbsp; Beaucoup de langages de programmation sont compilé, on peut y retrouver notamment _C_, _Rust_ et _GoLang_.
+
+### Langage byte-code
+
+Le byte-code représente une étape intermédiaire d'un langage compilé : 
+le code source est analysé et transcrit en _byte-code_, 
+qui ne peut pas être éxecuté ou compris directement par l'ordinateur.
+Un programme sous le nom de Virtual Machine, viendra interpréter ces fichiers.
+On peut considérer ce système comme un entre-deux de ceux présenter précédemment. 
+
+
+_L'architecte crée un plan général dans une sorte de croquis standardisé,
+mais ce croquis doit être interprété différemment en fonction des outils et des matériaux disponibles. 
+Avant de commencer la construction, les ouvriers utilisent un manuel spécialisé pour comprendre et adapter ce plan intermédiaire à leurs outils spécifiques. 
+C'est ainsi que fonctionne le bytecode : le code est traduit en une forme intermédiaire, 
+puis un interprète (machine virtuelle) le traduit pour l'ordinateur spécifique._
+
+> &#8505;&#65039; &nbsp; Peu de langages de programmation utilisent cette technique, et les plus populaires sont _Java_ et _C# (à prononcer "C Sharp")_.
+
+
+### Comparaison
+
+|                       |                    Interprété                    |             Compilé             |          Byte-Code           |
+|:---------------------:|:------------------------------------------------:|:-------------------------------:|:----------------------------:|
+|   __Vitesse / 10__    |                        1                         |               10                |              7               |
+|  __Cross platform*__  | Oui, mais a besoin d'un OS et de l'interpreter.  | Dépend seulement du processeur. | Besoin de la Virtual Machine |
+|  __Simplicité / 10__  |                        1                         |               ~8                |              ~8              |
+|   __Taille / 10**__   |                        3                         |                1                |              8               |
+| __Low Level / 10***__ |                        2                         |               10                |              9               |
+
+\* le _cross platform_ désigne la capacité d'un programme d'être compatible sur différente machine (téléphone, ordinateur Windows, Mac, etc.).
+
+\** désigne la taille des fichiers produits. (plus petit est meilleur)
+
+\*** fait référence à la distance d'un programme à l'ordinateur : plus un programme est _low level_, plus il aura de contrôle sur la machine.
+
+## 1.5. Types statiques vs. Types dynamiques
+
+Ces deux mots désignent un style de programmation, 
+qui peut être employé seulement avec les langages qui supportent la définition des types en temps réel.
+Le concept consiste à préciser le type de chaque variable, afin d'éviter les erreurs relaté à la mauvaise assignation de type, etc.
+Par exemple : `variable1 = 123`, reviendrait à `variable1 : nombre = 123`.
+
+> &#8505;&#65039; &nbsp; Les langages tels que _Python_, _TypeScript_, _JavaScript_ et _PHP_ supporte les 2 styles.
+
+### Types statiques
+
+Les types statiques, sont des types déterminés avant même l'éxecution du programme. Ceci permet à éviter les erreurs de type, et de mieux manipulé celle-ci.
+En Python, pour déclarer un type, nous devons lui assigner un nom ainsi que sa valeur.
+```python
+# <variable> : <type> = <valeur>
+variable: str = "salut"
+```
+Ici par exemple, nous assignons à la variable `variable` le type `string`, 
+soit une chaine de caractères, une phrase, représenté en python par le mot `str`.
+En revanche, cela peut causer des problèmes si l'on veut assigner cette variable à un type `NULL`,
+ou `None` en Python, c'est-à-dire RIEN. Pour y remédié, on spécifie que le type peut aussi être `None`, comme cela :
+```python
+variable: str or None = "salut"
+variable = None # ça marche 
+```
+
+### Types dynamiques
+
+Les types dynamiques consistent seulement à ne pas préciser le type de la variable, 
+et peut mener à des erreurs si l'utilisateur ne fait pas attention.
+
+```python
+variable = "salut"
+variable = 123
+variable = [1, 2, 3]
+```
+
+Ce code ci-dessus marchera sans problème.
+
+
+### Conclusion sur les types
+
+Il est préférable de coder avec des types statiques, pour éviter tous conflits,
+et améliorer la compréhension du programme en son ensemble.
+
+## 1.6. L'algorithmie et les mathématiques dans la programmation
+
+La programmation, historiquement, ainsi que tout ce qui concerne l'informatique, viens des mathématiques.
+Seulement, les ordinateurs ne calculs pas comme nous : nous utilisons des ensembles de chiffres, 
+compris dans la base de 10, et utilisons notre cerveau, un outil puissant, mais complexe.
+L'ordinateur, lui, utilise du million d'interrupteurs ON & OFF, représenté en binaire 1 et 0, qui, 
+lorsqu'ils sont assemblé, peuvent former des chiffres extrêmement longs et précis.
+
+La compréhension du fonctionnement d'un ordinateur est importante pour les développeurs, 
+bien que quelques langages soient épargnés ; Python en fait partit.
+
+Les maths, dans leur globalité, est nécessaire, car, 
+grace au développement de la logique, résolution de problème, et algorithmie, 
+une grande partie des bases sont acquises, et permettent un apprentissage rapide et fluide.
+Prenons les boucles en exemple :
+```
+de 1 à 7, faire ...
+```
+qui équivaut à :
+```python
+for i in range(1, 7):
+    ...
+```
+peut être représenté par :
+
+$$
+\sum_{i=1}^7 (...) = (...)
+$$
+
+Les mathématiques avancées sont requis pour les développeurs avancés, et ne concernent pas l'audience de ce livre, mais il est tout de même important a noté que la logique est surement la compétence __la plus importante__ en programmation.
+
+## 1.7. Les conventions
+
+Les conventions sont une grosse partie des langages de programmation. Elles définissent des règles à suivre, pour homogénéiser le code des différents développeurs. On peut rapporter ce principe a celui des Sciences, qui définit les notations, formules et unitées international, tel que $km.h^{-1}$, ou encore $\sqrt(a^{2} + b^{2})$. 
+
+Il existe plusieurs types de notations :
+ * _UpperCamelCase_ : consiste à mettre en majuscule la première lettre de chaque mot, sans les séparer par un espace. (`BonjourLesAmis`)
+ * _lowerCamelCase_ : consiste à mettre en majuscule la première lettre de chaque mot, excepté le tout premier, sans les séparer par un espace. (`bonjourLesAmis`)
+ * _snake\_case_ : consiste en remplacé les espaces par un tiret du bas `_`. (`bonjour_les_amis`)
+ * _flatcase_ : consiste a écrire tout en minuscule sans espace. (`bonjourlesamis`)
+
+Python utilise le _snake\_case_, et donc, chaque variable, fonction, ou classe, sauf exceptions, doivent se plier à ces conventions
+Les espaces étant interdit dans ~99% des langages, dans la nomination, il faut pouvoir distinguer les mots entre eux.
+Exemple en, Python :
+```python
+phrase_de_bonjour = "salut"
+def dire_bonjour(): ...
+class Mot_Bonjour: ...
+```
+
+Aucun mot définit par l'utilisateur tel que la nomination des variables, classes, et fonctions, ont interdiction de commencé par un chiffre, de contenir des espaces ou caractère spéciaux tel que les accents, les symboles monétaires, etc.
+
+# 2. Les outils
