@@ -517,8 +517,18 @@ Aucun mot définit par l'utilisateur tel que la nomination des variables, classe
 
 ## Les éditeurs de texte
 
-Les éditeurs de texte sont présents sur quasiment n'importe quel ordinateur, et peuvent être très simpliste (NotePad sur windows), ou avancé, adapté pour la programmation avec des fonctionnalités supplémentaires.
+Les éditeurs de texte sont présents sur quasiment n'importe quel ordinateur, 
+et peuvent être très simpliste (NotePad sur windows), ou avancé, 
+adapté pour la programmation avec des fonctionnalités supplémentaires.
+Pour la plupart des éditeurs avancés, une coloration de la syntaxe
+aide les développeurs à mieux lire et analisé leur code, et peut avoir accès à un correcteur, qui détecte et corrige les erreurs.
 
+Beaucoup d'entre eux sont open-source, gratuit et léger (ne prend pas de place sur le disque).
+
+Les plus populaires sont :
+ * VSCode (_Visual Studio Code_) : un éditeur complet et open source créée par Microsoft, qui dispose d'un large panneau de personnalisation.
+ * Sublime Text : éditeur de texte assez vieux, similaire a vscode mais moins avancé.
+ * 
 
 ## Les IDEs
 
