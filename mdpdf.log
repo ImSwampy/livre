@@ -1,0 +1,206 @@
+    INFO: 2024-10-31 03:21:02,676:               log.py:   20: Logging to C:\Users\Swampy\PycharmProjects\livre\mdpdf.log
+   DEBUG: 2024-10-31 03:21:02,676:               cli.py:  103: truc.md
+    INFO: 2024-10-31 03:21:02,677:         converter.py:   14: truc.md
+   DEBUG: 2024-10-31 03:21:02,706:      pdf_renderer.py:  470: printSegment: Python
+   DEBUG: 2024-10-31 03:21:02,710:      pdf_renderer.py:  470: printSegment: Sommaire
+   DEBUG: 2024-10-31 03:21:02,710:      pdf_renderer.py:  470: printSegment: 1. Introduction et concepts
+   ERROR: 2024-10-31 03:21:02,711:      pdf_renderer.py:  217: C:\Users\Swampy\PycharmProjects\livre\truc.md:7: #1-introduction-et-concepts: No such file or directory
+   DEBUG: 2024-10-31 03:21:02,711:      pdf_renderer.py:  470: printSegment: l
+   DEBUG: 2024-10-31 03:21:02,712:      pdf_renderer.py:  470: printSegment: 1.1. Fonctionnement d
+   DEBUG: 2024-10-31 03:21:02,714:      pdf_renderer.py:  470: printSegment: '
+   DEBUG: 2024-10-31 03:21:02,715:      pdf_renderer.py:  470: printSegment: un ordinateur
+   ERROR: 2024-10-31 03:21:02,716:      pdf_renderer.py:  217: C:\Users\Swampy\PycharmProjects\livre\truc.md:8: #11-fonctionnement-dun-ordinateur: No such file or directory
+   DEBUG: 2024-10-31 03:21:02,716:      pdf_renderer.py:  470: printSegment: l
+   DEBUG: 2024-10-31 03:21:02,716:      pdf_renderer.py:  470: printSegment: 1.1.1. Les composants
+   ERROR: 2024-10-31 03:21:02,717:      pdf_renderer.py:  217: C:\Users\Swampy\PycharmProjects\livre\truc.md:9: #les-composants: No such file or directory
+   DEBUG: 2024-10-31 03:21:02,717:      pdf_renderer.py:  470: printSegment: l
+   DEBUG: 2024-10-31 03:21:02,718:      pdf_renderer.py:  470: printSegment: 1.1.2. Mémoire RAM
+   ERROR: 2024-10-31 03:21:02,718:      pdf_renderer.py:  217: C:\Users\Swampy\PycharmProjects\livre\truc.md:10: #m%C3%A9moire-ram: No such file or directory
+   DEBUG: 2024-10-31 03:21:02,718:      pdf_renderer.py:  470: printSegment: l
+   DEBUG: 2024-10-31 03:21:02,719:      pdf_renderer.py:  470: printSegment: 1.1.3. CPU
+   ERROR: 2024-10-31 03:21:02,719:      pdf_renderer.py:  217: C:\Users\Swampy\PycharmProjects\livre\truc.md:11: #processeur: No such file or directory
+   DEBUG: 2024-10-31 03:21:02,719:      pdf_renderer.py:  470: printSegment: l
+   DEBUG: 2024-10-31 03:21:02,720:      pdf_renderer.py:  470: printSegment: 1.1.3.1. Threads
+   ERROR: 2024-10-31 03:21:02,720:      pdf_renderer.py:  217: C:\Users\Swampy\PycharmProjects\livre\truc.md:12: #threads: No such file or directory
+   DEBUG: 2024-10-31 03:21:02,720:      pdf_renderer.py:  470: printSegment: l
+   DEBUG: 2024-10-31 03:21:02,721:      pdf_renderer.py:  470: printSegment: 1.1.3.2. Cache
+   ERROR: 2024-10-31 03:21:02,721:      pdf_renderer.py:  217: C:\Users\Swampy\PycharmProjects\livre\truc.md:13: #cache: No such file or directory
+   DEBUG: 2024-10-31 03:21:02,722:      pdf_renderer.py:  470: printSegment: l
+   DEBUG: 2024-10-31 03:21:02,722:      pdf_renderer.py:  470: printSegment: 1.1.4. GPU
+   ERROR: 2024-10-31 03:21:02,723:      pdf_renderer.py:  217: C:\Users\Swampy\PycharmProjects\livre\truc.md:14: #carte-graphique: No such file or directory
+   DEBUG: 2024-10-31 03:21:02,723:      pdf_renderer.py:  470: printSegment: l
+   DEBUG: 2024-10-31 03:21:02,724:      pdf_renderer.py:  470: printSegment: 1.1.4.1. Traitement des données
+   ERROR: 2024-10-31 03:21:02,724:      pdf_renderer.py:  217: C:\Users\Swampy\PycharmProjects\livre\truc.md:15: #traitement-des-donn%C3%A9es: No such file or directory
+   DEBUG: 2024-10-31 03:21:02,724:      pdf_renderer.py:  470: printSegment: l
+   DEBUG: 2024-10-31 03:21:02,725:      pdf_renderer.py:  470: printSegment: 1.2. Python et ses applications
+   ERROR: 2024-10-31 03:21:02,725:      pdf_renderer.py:  217: C:\Users\Swampy\PycharmProjects\livre\truc.md:16: #12-python-et-ses-applications: No such file or directory
+   DEBUG: 2024-10-31 03:21:02,726:      pdf_renderer.py:  470: printSegment: l
+   DEBUG: 2024-10-31 03:21:02,726:      pdf_renderer.py:  470: printSegment: 1.2.1. Les domaines adaptés
+   ERROR: 2024-10-31 03:21:02,727:      pdf_renderer.py:  217: C:\Users\Swampy\PycharmProjects\livre\truc.md:17: #les-domaines-adapt%C3%A9s: No such file or directory
+   DEBUG: 2024-10-31 03:21:02,727:      pdf_renderer.py:  470: printSegment: l
+   DEBUG: 2024-10-31 03:21:02,728:      pdf_renderer.py:  470: printSegment: 1.2.1. Les domaines non-adaptés
+   ERROR: 2024-10-31 03:21:02,728:      pdf_renderer.py:  217: C:\Users\Swampy\PycharmProjects\livre\truc.md:18: #les-domaines-non-adapt%C3%A9s: No such file or directory
+   DEBUG: 2024-10-31 03:21:02,728:      pdf_renderer.py:  470: printSegment: l
+   DEBUG: 2024-10-31 03:21:02,729:      pdf_renderer.py:  470: printSegment: 1.3. Python et son environnement
+   ERROR: 2024-10-31 03:21:02,730:      pdf_renderer.py:  217: C:\Users\Swampy\PycharmProjects\livre\truc.md:19: #13-python-et-son-environnement: No such file or directory
+   DEBUG: 2024-10-31 03:21:02,730:      pdf_renderer.py:  470: printSegment: l
+   DEBUG: 2024-10-31 03:21:02,731:      pdf_renderer.py:  470: printSegment: 1.3.1. Package Manager
+   ERROR: 2024-10-31 03:21:02,732:      pdf_renderer.py:  217: C:\Users\Swampy\PycharmProjects\livre\truc.md:20: #le-package-manager: No such file or directory
+   DEBUG: 2024-10-31 03:21:02,732:      pdf_renderer.py:  470: printSegment: l
+   DEBUG: 2024-10-31 03:21:02,732:      pdf_renderer.py:  470: printSegment: 1.3.2. Les librairies
+   ERROR: 2024-10-31 03:21:02,733:      pdf_renderer.py:  217: C:\Users\Swampy\PycharmProjects\livre\truc.md:21: #les-librairies: No such file or directory
+   DEBUG: 2024-10-31 03:21:02,733:      pdf_renderer.py:  470: printSegment: l
+   DEBUG: 2024-10-31 03:21:02,734:      pdf_renderer.py:  470: printSegment: 1.3.2.1. Les librairies standards
+   ERROR: 2024-10-31 03:21:02,735:      pdf_renderer.py:  217: C:\Users\Swampy\PycharmProjects\livre\truc.md:22: #les-libraries-standards: No such file or directory
+   DEBUG: 2024-10-31 03:21:02,735:      pdf_renderer.py:  470: printSegment: l
+   DEBUG: 2024-10-31 03:21:02,735:      pdf_renderer.py:  470: printSegment: 1.3.2.2. Les librairies populaires
+   ERROR: 2024-10-31 03:21:02,736:      pdf_renderer.py:  217: C:\Users\Swampy\PycharmProjects\livre\truc.md:23: #les-libraries-populaires: No such file or directory
+   DEBUG: 2024-10-31 03:21:02,736:      pdf_renderer.py:  470: printSegment: l
+   DEBUG: 2024-10-31 03:21:02,737:      pdf_renderer.py:  470: printSegment: 1.3.3. Conda
+   ERROR: 2024-10-31 03:21:02,738:      pdf_renderer.py:  217: C:\Users\Swampy\PycharmProjects\livre\truc.md:24: #conda: No such file or directory
+   DEBUG: 2024-10-31 03:21:02,738:      pdf_renderer.py:  470: printSegment: l
+   DEBUG: 2024-10-31 03:21:02,739:      pdf_renderer.py:  470: printSegment: 1.4. Langage interprété vs. compilé vs. Byte-code
+   ERROR: 2024-10-31 03:21:02,740:      pdf_renderer.py:  217: C:\Users\Swampy\PycharmProjects\livre\truc.md:25: #14-langage-interpr%C3%A9t%C3%A9-vs-compil%C3%A9-vs-byte-code: No such file or directory
+   DEBUG: 2024-10-31 03:21:02,740:      pdf_renderer.py:  470: printSegment: l
+   DEBUG: 2024-10-31 03:21:02,740:      pdf_renderer.py:  470: printSegment: 1.4.1. Langage Interprété
+   ERROR: 2024-10-31 03:21:02,741:      pdf_renderer.py:  217: C:\Users\Swampy\PycharmProjects\livre\truc.md:26: #langage-interpr%C3%A9t%C3%A9: No such file or directory
+   DEBUG: 2024-10-31 03:21:02,741:      pdf_renderer.py:  470: printSegment: l
+   DEBUG: 2024-10-31 03:21:02,742:      pdf_renderer.py:  470: printSegment: 1.4.2. Langage Compilé
+   ERROR: 2024-10-31 03:21:02,743:      pdf_renderer.py:  217: C:\Users\Swampy\PycharmProjects\livre\truc.md:27: #langage-compil%C3%A9: No such file or directory
+   DEBUG: 2024-10-31 03:21:02,743:      pdf_renderer.py:  470: printSegment: l
+   DEBUG: 2024-10-31 03:21:02,744:      pdf_renderer.py:  470: printSegment: 1.4.3. Langage Byte-code
+   ERROR: 2024-10-31 03:21:02,744:      pdf_renderer.py:  217: C:\Users\Swampy\PycharmProjects\livre\truc.md:28: #langage-byte-code: No such file or directory
+   DEBUG: 2024-10-31 03:21:02,744:      pdf_renderer.py:  470: printSegment: l
+   DEBUG: 2024-10-31 03:21:02,745:      pdf_renderer.py:  470: printSegment: 1.4.4. Comparaison
+   ERROR: 2024-10-31 03:21:02,745:      pdf_renderer.py:  217: C:\Users\Swampy\PycharmProjects\livre\truc.md:29: #comparaison: No such file or directory
+   DEBUG: 2024-10-31 03:21:02,745:      pdf_renderer.py:  470: printSegment: l
+   DEBUG: 2024-10-31 03:21:02,746:      pdf_renderer.py:  470: printSegment: 1.5. Types statiques et Types dynamiques
+   ERROR: 2024-10-31 03:21:02,747:      pdf_renderer.py:  217: C:\Users\Swampy\PycharmProjects\livre\truc.md:30: #15-types-statiques-vs-types-dynamiques: No such file or directory
+   DEBUG: 2024-10-31 03:21:02,747:      pdf_renderer.py:  470: printSegment: l
+   DEBUG: 2024-10-31 03:21:02,747:      pdf_renderer.py:  470: printSegment: 1.5.1. Types statiques
+   ERROR: 2024-10-31 03:21:02,748:      pdf_renderer.py:  217: C:\Users\Swampy\PycharmProjects\livre\truc.md:31: #types-statiques: No such file or directory
+   DEBUG: 2024-10-31 03:21:02,748:      pdf_renderer.py:  470: printSegment: l
+   DEBUG: 2024-10-31 03:21:02,749:      pdf_renderer.py:  470: printSegment: 1.5.2. Types dynamiques
+   ERROR: 2024-10-31 03:21:02,749:      pdf_renderer.py:  217: C:\Users\Swampy\PycharmProjects\livre\truc.md:32: #types-dynamiques: No such file or directory
+   DEBUG: 2024-10-31 03:21:02,749:      pdf_renderer.py:  470: printSegment: l
+   DEBUG: 2024-10-31 03:21:02,750:      pdf_renderer.py:  470: printSegment: 1.5.3. Conclusion sur les types
+   ERROR: 2024-10-31 03:21:02,751:      pdf_renderer.py:  217: C:\Users\Swampy\PycharmProjects\livre\truc.md:33: #conclusion-sur-les-types: No such file or directory
+   DEBUG: 2024-10-31 03:21:02,751:      pdf_renderer.py:  470: printSegment: l
+   DEBUG: 2024-10-31 03:21:02,751:      pdf_renderer.py:  470: printSegment: 1.6. L
+   DEBUG: 2024-10-31 03:21:02,752:      pdf_renderer.py:  470: printSegment: '
+   DEBUG: 2024-10-31 03:21:02,752:      pdf_renderer.py:  470: printSegment: algorithmie et les mathématiques dans la programmation
+   ERROR: 2024-10-31 03:21:02,753:      pdf_renderer.py:  217: C:\Users\Swampy\PycharmProjects\livre\truc.md:34: #16-lalgorithmie-et-les-math%C3%A9matiques-dans-la-programmation: No such file or directory
+   DEBUG: 2024-10-31 03:21:02,753:      pdf_renderer.py:  470: printSegment: l
+   DEBUG: 2024-10-31 03:21:02,754:      pdf_renderer.py:  470: printSegment: 1.7. Les conventions
+   ERROR: 2024-10-31 03:21:02,754:      pdf_renderer.py:  217: C:\Users\Swampy\PycharmProjects\livre\truc.md:35: #17-les-conventions: No such file or directory
+   DEBUG: 2024-10-31 03:21:02,755:      pdf_renderer.py:  470: printSegment: 2. Les outils
+   ERROR: 2024-10-31 03:21:02,755:      pdf_renderer.py:  217: C:\Users\Swampy\PycharmProjects\livre\truc.md:37: #2-les-outils: No such file or directory
+   DEBUG: 2024-10-31 03:21:02,756:      pdf_renderer.py:  470: printSegment: l
+   DEBUG: 2024-10-31 03:21:02,756:      pdf_renderer.py:  470: printSegment: 2.1. Les éditeurs de texte
+   ERROR: 2024-10-31 03:21:02,757:      pdf_renderer.py:  217: C:\Users\Swampy\PycharmProjects\livre\truc.md:38: #21-les-%C3%A9diteurs-de-texte: No such file or directory
+   DEBUG: 2024-10-31 03:21:02,757:      pdf_renderer.py:  470: printSegment: l
+   DEBUG: 2024-10-31 03:21:02,758:      pdf_renderer.py:  470: printSegment: 2.2. Les IDEs
+   ERROR: 2024-10-31 03:21:02,758:      pdf_renderer.py:  217: C:\Users\Swampy\PycharmProjects\livre\truc.md:39: #22-les-ides: No such file or directory
+   DEBUG: 2024-10-31 03:21:02,758:      pdf_renderer.py:  470: printSegment: l
+   DEBUG: 2024-10-31 03:21:02,759:      pdf_renderer.py:  470: printSegment: 2.3. Les debuggers
+   ERROR: 2024-10-31 03:21:02,760:      pdf_renderer.py:  217: C:\Users\Swampy\PycharmProjects\livre\truc.md:40: #23-les-debuggers: No such file or directory
+   DEBUG: 2024-10-31 03:21:02,760:      pdf_renderer.py:  470: printSegment: l
+   DEBUG: 2024-10-31 03:21:02,760:      pdf_renderer.py:  470: printSegment: 2.4. Environnement Python
+   ERROR: 2024-10-31 03:21:02,761:      pdf_renderer.py:  217: C:\Users\Swampy\PycharmProjects\livre\truc.md:41: #24-environnement-python: No such file or directory
+   DEBUG: 2024-10-31 03:21:02,761:      pdf_renderer.py:  470: printSegment: l
+   DEBUG: 2024-10-31 03:21:02,762:      pdf_renderer.py:  470: printSegment: 2.4.1. Concept de l
+   DEBUG: 2024-10-31 03:21:02,762:      pdf_renderer.py:  470: printSegment: '
+   DEBUG: 2024-10-31 03:21:02,763:      pdf_renderer.py:  470: printSegment: environnement virtuel
+   ERROR: 2024-10-31 03:21:02,763:      pdf_renderer.py:  217: C:\Users\Swampy\PycharmProjects\livre\truc.md:42: #concept-de-lenvironnement-virtuel: No such file or directory
+   DEBUG: 2024-10-31 03:21:02,764:      pdf_renderer.py:  470: printSegment: l
+   DEBUG: 2024-10-31 03:21:02,765:      pdf_renderer.py:  470: printSegment: 2.4.1. venv
+   ERROR: 2024-10-31 03:21:02,766:      pdf_renderer.py:  217: C:\Users\Swampy\PycharmProjects\livre\truc.md:43: #venv: No such file or directory
+   DEBUG: 2024-10-31 03:21:02,766:      pdf_renderer.py:  470: printSegment: l
+   DEBUG: 2024-10-31 03:21:02,766:      pdf_renderer.py:  470: printSegment: 2.4.2. Conda env
+   ERROR: 2024-10-31 03:21:02,767:      pdf_renderer.py:  217: C:\Users\Swampy\PycharmProjects\livre\truc.md:44: #conda-env: No such file or directory
+   DEBUG: 2024-10-31 03:21:02,767:      pdf_renderer.py:  470: printSegment: l
+   DEBUG: 2024-10-31 03:21:02,767:      pdf_renderer.py:  470: printSegment: 2.4.3. Poetry
+   ERROR: 2024-10-31 03:21:02,768:      pdf_renderer.py:  217: C:\Users\Swampy\PycharmProjects\livre\truc.md:45: #poetry: No such file or directory
+   DEBUG: 2024-10-31 03:21:02,768:      pdf_renderer.py:  470: printSegment: l
+   DEBUG: 2024-10-31 03:21:02,769:      pdf_renderer.py:  470: printSegment: 2.5. Le Package Manager
+   ERROR: 2024-10-31 03:21:02,769:      pdf_renderer.py:  217: C:\Users\Swampy\PycharmProjects\livre\truc.md:46: #25-le-package-manager: No such file or directory
+   DEBUG: 2024-10-31 03:21:02,769:      pdf_renderer.py:  470: printSegment: 3. Les bases
+   ERROR: 2024-10-31 03:21:02,770:      pdf_renderer.py:  217: C:\Users\Swampy\PycharmProjects\livre\truc.md:48: #3-les-bases-1: No such file or directory
+   DEBUG: 2024-10-31 03:21:02,770:      pdf_renderer.py:  470: printSegment: l
+   DEBUG: 2024-10-31 03:21:02,771:      pdf_renderer.py:  470: printSegment: 3.1. Les notations / particularitées syntaxique
+   ERROR: 2024-10-31 03:21:02,772:      pdf_renderer.py:  217: C:\Users\Swampy\PycharmProjects\livre\truc.md:49: #31-les-notations--particularit%C3%A9es-syntaxique: No such file or directory
+   DEBUG: 2024-10-31 03:21:02,772:      pdf_renderer.py:  470: printSegment: l
+   DEBUG: 2024-10-31 03:21:02,772:      pdf_renderer.py:  470: printSegment: 3.2. Les variables et ses types
+   ERROR: 2024-10-31 03:21:02,773:      pdf_renderer.py:  217: C:\Users\Swampy\PycharmProjects\livre\truc.md:50: #32-les-variables-et-ses-types: No such file or directory
+   DEBUG: 2024-10-31 03:21:02,773:      pdf_renderer.py:  470: printSegment: l
+   DEBUG: 2024-10-31 03:21:02,774:      pdf_renderer.py:  470: printSegment: 3.3. Les fonctions de bases
+   ERROR: 2024-10-31 03:21:02,774:      pdf_renderer.py:  217: C:\Users\Swampy\PycharmProjects\livre\truc.md:51: #33-les-fonctions-de-base: No such file or directory
+   DEBUG: 2024-10-31 03:21:02,774:      pdf_renderer.py:  470: printSegment: l
+   DEBUG: 2024-10-31 03:21:02,775:      pdf_renderer.py:  470: printSegment: 3.3.1. Gérer la console
+   ERROR: 2024-10-31 03:21:02,775:      pdf_renderer.py:  217: C:\Users\Swampy\PycharmProjects\livre\truc.md:52: #g%C3%A9rer-la-console: No such file or directory
+   DEBUG: 2024-10-31 03:21:02,776:      pdf_renderer.py:  470: printSegment: l
+   DEBUG: 2024-10-31 03:21:02,776:      pdf_renderer.py:  470: printSegment: 3.3.2. Les opérations et calculs
+   ERROR: 2024-10-31 03:21:02,777:      pdf_renderer.py:  217: C:\Users\Swampy\PycharmProjects\livre\truc.md:53: #les-op%C3%A9rations-et-calculs: No such file or directory
+   DEBUG: 2024-10-31 03:21:02,777:      pdf_renderer.py:  470: printSegment: l
+   DEBUG: 2024-10-31 03:21:02,778:      pdf_renderer.py:  470: printSegment: 3.4. Les commentaires
+   ERROR: 2024-10-31 03:21:02,778:      pdf_renderer.py:  217: C:\Users\Swampy\PycharmProjects\livre\truc.md:54: #34-les-commentaires: No such file or directory
+   DEBUG: 2024-10-31 03:21:02,779:      pdf_renderer.py:  470: printSegment: l
+   DEBUG: 2024-10-31 03:21:02,779:      pdf_renderer.py:  470: printSegment: 3.4.1. Les commentaires en fin de ligne
+   ERROR: 2024-10-31 03:21:02,780:      pdf_renderer.py:  217: C:\Users\Swampy\PycharmProjects\livre\truc.md:55: #les-commentaires-en-fin-de-ligne: No such file or directory
+   DEBUG: 2024-10-31 03:21:02,780:      pdf_renderer.py:  470: printSegment: l
+   DEBUG: 2024-10-31 03:21:02,780:      pdf_renderer.py:  470: printSegment: 3.4.2. Les commentaires multi-ligne
+   ERROR: 2024-10-31 03:21:02,781:      pdf_renderer.py:  217: C:\Users\Swampy\PycharmProjects\livre\truc.md:56: #les-commentaires-multi-ligne: No such file or directory
+   DEBUG: 2024-10-31 03:21:02,781:      pdf_renderer.py:  470: printSegment: l
+   DEBUG: 2024-10-31 03:21:02,782:      pdf_renderer.py:  470: printSegment: 3.5. Les boucles
+   ERROR: 2024-10-31 03:21:02,782:      pdf_renderer.py:  217: C:\Users\Swampy\PycharmProjects\livre\truc.md:57: #35-les-boucles: No such file or directory
+   DEBUG: 2024-10-31 03:21:02,782:      pdf_renderer.py:  470: printSegment: l
+   DEBUG: 2024-10-31 03:21:02,783:      pdf_renderer.py:  470: printSegment: 3.5.1. For loop
+   ERROR: 2024-10-31 03:21:02,783:      pdf_renderer.py:  217: C:\Users\Swampy\PycharmProjects\livre\truc.md:58: #for-loop: No such file or directory
+   DEBUG: 2024-10-31 03:21:02,783:      pdf_renderer.py:  470: printSegment: l
+   DEBUG: 2024-10-31 03:21:02,784:      pdf_renderer.py:  470: printSegment: 3.5.2. While loop
+   ERROR: 2024-10-31 03:21:02,785:      pdf_renderer.py:  217: C:\Users\Swampy\PycharmProjects\livre\truc.md:59: #while-loop: No such file or directory
+   DEBUG: 2024-10-31 03:21:02,785:      pdf_renderer.py:  470: printSegment: l
+   DEBUG: 2024-10-31 03:21:02,785:      pdf_renderer.py:  470: printSegment: 3.6. Les conditions
+   ERROR: 2024-10-31 03:21:02,786:      pdf_renderer.py:  217: C:\Users\Swampy\PycharmProjects\livre\truc.md:60: #36-les-conditions: No such file or directory
+   DEBUG: 2024-10-31 03:21:02,786:      pdf_renderer.py:  470: printSegment: l
+   DEBUG: 2024-10-31 03:21:02,787:      pdf_renderer.py:  470: printSegment: 3.6.1. Les comparaisons
+   ERROR: 2024-10-31 03:21:02,787:      pdf_renderer.py:  217: C:\Users\Swampy\PycharmProjects\livre\truc.md:61: #les-comparaisons: No such file or directory
+   DEBUG: 2024-10-31 03:21:02,787:      pdf_renderer.py:  470: printSegment: l
+   DEBUG: 2024-10-31 03:21:02,788:      pdf_renderer.py:  470: printSegment: 3.6.2. If
+   ERROR: 2024-10-31 03:21:02,788:      pdf_renderer.py:  217: C:\Users\Swampy\PycharmProjects\livre\truc.md:62: #if: No such file or directory
+   DEBUG: 2024-10-31 03:21:02,789:      pdf_renderer.py:  470: printSegment: l
+   DEBUG: 2024-10-31 03:21:02,789:      pdf_renderer.py:  470: printSegment: 3.6.3. Elif
+   ERROR: 2024-10-31 03:21:02,790:      pdf_renderer.py:  217: C:\Users\Swampy\PycharmProjects\livre\truc.md:63: #elif: No such file or directory
+   DEBUG: 2024-10-31 03:21:02,790:      pdf_renderer.py:  470: printSegment: l
+   DEBUG: 2024-10-31 03:21:02,791:      pdf_renderer.py:  470: printSegment: 3.5.4. Else
+   ERROR: 2024-10-31 03:21:02,791:      pdf_renderer.py:  217: C:\Users\Swampy\PycharmProjects\livre\truc.md:64: #else: No such file or directory
+   DEBUG: 2024-10-31 03:21:02,792:      pdf_renderer.py:  470: printSegment: l
+   DEBUG: 2024-10-31 03:21:02,792:      pdf_renderer.py:  470: printSegment: 3.5.5. Match
+   ERROR: 2024-10-31 03:21:02,793:      pdf_renderer.py:  217: C:\Users\Swampy\PycharmProjects\livre\truc.md:65: #match: No such file or directory
+   DEBUG: 2024-10-31 03:21:02,793:      pdf_renderer.py:  470: printSegment: l
+   DEBUG: 2024-10-31 03:21:02,793:      pdf_renderer.py:  470: printSegment: 3.7. Les fonctions
+   ERROR: 2024-10-31 03:21:02,794:      pdf_renderer.py:  217: C:\Users\Swampy\PycharmProjects\livre\truc.md:66: #37-les-fonctions: No such file or directory
+   DEBUG: 2024-10-31 03:21:02,794:      pdf_renderer.py:  470: printSegment: l
+   DEBUG: 2024-10-31 03:21:02,795:      pdf_renderer.py:  470: printSegment: 3.8. Les classes
+   ERROR: 2024-10-31 03:21:02,796:      pdf_renderer.py:  217: C:\Users\Swampy\PycharmProjects\livre\truc.md:67: #38-les-classes: No such file or directory
+   DEBUG: 2024-10-31 03:21:02,796:      pdf_renderer.py:  470: printSegment: l
+   DEBUG: 2024-10-31 03:21:02,797:      pdf_renderer.py:  470: printSegment: 3.8.1. La programmation orientée objet
+   ERROR: 2024-10-31 03:21:02,798:      pdf_renderer.py:  217: C:\Users\Swampy\PycharmProjects\livre\truc.md:68: #la-programmation-orient%C3%A9e-objet: No such file or directory
+   DEBUG: 2024-10-31 03:21:02,798:      pdf_renderer.py:  470: printSegment: l
+   DEBUG: 2024-10-31 03:21:02,798:      pdf_renderer.py:  470: printSegment: 3.8.2. L
+   DEBUG: 2024-10-31 03:21:02,799:      pdf_renderer.py:  470: printSegment: '
+   DEBUG: 2024-10-31 03:21:02,799:      pdf_renderer.py:  470: printSegment: initialisation
+   ERROR: 2024-10-31 03:21:02,800:      pdf_renderer.py:  217: C:\Users\Swampy\PycharmProjects\livre\truc.md:69: #linitialisation: No such file or directory
+   DEBUG: 2024-10-31 03:21:02,800:      pdf_renderer.py:  470: printSegment: l
+   DEBUG: 2024-10-31 03:21:02,802:      pdf_renderer.py:  470: printSegment: 3.8.3. Les bases sur les classes
+   ERROR: 2024-10-31 03:21:02,803:      pdf_renderer.py:  217: C:\Users\Swampy\PycharmProjects\livre\truc.md:70: #les-bases-sur-les-classes: No such file or directory
+   DEBUG: 2024-10-31 03:21:02,803:      pdf_renderer.py:  470: printSegment: l
+   DEBUG: 2024-10-31 03:21:02,804:      pdf_renderer.py:  470: printSegment: 3.8.3.1 Les getter
+   ERROR: 2024-10-31 03:21:02,804:      pdf_renderer.py:  217: C:\Users\Swampy\PycharmProjects\livre\truc.md:71: #les-getter: No such file or directory
+   DEBUG: 2024-10-31 03:21:02,805:      pdf_renderer.py:  470: printSegment: l
+   DEBUG: 2024-10-31 03:21:02,805:      pdf_renderer.py:  470: printSegment: 3.8.3.1 Les setter
+   ERROR: 2024-10-31 03:21:02,806:      pdf_renderer.py:  217: C:\Users\Swampy\PycharmProjects\livre\truc.md:72: #les-setter: No such file or directory
+   DEBUG: 2024-10-31 03:21:02,806:      pdf_renderer.py:  470: printSegment: l
+   DEBUG: 2024-10-31 03:21:02,807:      pdf_renderer.py:  470: printSegment: 3.8.3.1 Les 
+   DEBUG: 2024-10-31 03:21:02,807:      pdf_renderer.py:  470: printSegment: private
+   DEBUG: 2024-10-31 03:21:02,809:      pdf_renderer.py:  470: printSegment:  variables
