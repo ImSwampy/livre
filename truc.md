@@ -4,7 +4,7 @@
 
 ## Sommaire ##
 
-### [1. Introduction et concepts](#1-introduction-et-concepts)
+### [1. Introduction et concepts](#1-introduction-et-concepts-1)
   * [1.1. Fonctionnement d'un ordinateur](#11-fonctionnement-dun-ordinateur)
     * [1.1.1. Les composants](#les-composants)
     * [1.1.2. Mémoire RAM](#mémoire-ram)
@@ -34,7 +34,7 @@
   * [1.6. L'algorithmie et les mathématiques dans la programmation](#16-lalgorithmie-et-les-mathématiques-dans-la-programmation)
   * [1.7. Les conventions](#17-les-conventions)
 
-### [2. Les outils](#2-les-outils)
+### [2. Les outils](#2-les-outils-1)
   * [2.1. Les éditeurs de texte](#21-les-éditeurs-de-texte)
   * [2.2. Les IDEs](#22-les-ides)
   * [2.3. Les debuggers](#23-les-debuggers)
@@ -78,18 +78,19 @@
     * [4.1.1. Import](#import)
     * [4.1.2. From](#from)
     * [4.1.3. As](#as)
-  * [4.2. L'aléatoire](#43-laléatoire)
+  * [4.2. L'aléatoire](#42-laléatoire)
     * [4.2.1. random.randint()](#randomrandint)
     * [4.2.2. random.choice()](#randomchoice)
     * [4.2.3. random.choices()](#randomchoices)
-  * 4.3. Ouvrir et fermer des fichiers
-  * 4.4. Les dictionnaires et JSON
+  * [4.3. Manipulation de fichier](#43-manipulation-de-fichier)
+  * [4.4. Les dictionnaires et JSON](#44-les-dictionnaires-et-json)
   * 4.5. Les Listes
   * 4.6. Les classes : avancé
     * 4.6.1. Inhéritance
     * 4.6.2. Encapsulation
     * 4.6.3. Polymorphisme
   * 4.7. Les exceptions
+  * 4.8. Les mots clés 
 - __Projet : créer un fichier d'identité avancé__
 
 ### 5. Python avancé : plongé dans le threading, l'asynchrone et le web
@@ -257,13 +258,11 @@ Elles sont designé pour le calcul intensif simultané, grace a leurs milliers d
 
 Généralement, les données utilisées par la carte graphique sont fait de matrices :
 
-$$
-\begin{bmatrix}
-1 & 2 & 3 \\
-4 & 5 & 6 \\
-7 & 8 & 9
-\end{bmatrix}
-$$
+```
+[ 1  2  3 ]
+[ 4  5  6 ]
+[ 7  8  9 ]
+```
 
 
 Telle celle-ci dessus, et peut subir de complexe calculs comme la rotation, addition, multiplication, et division de matrices, ou encore même des calculs de vecteurs. 
@@ -505,15 +504,17 @@ for i in range(1, 7):
 ```
 peut être représenté par :
 
-$$
-\sum_{i=1}^7 (...) = (...)
-$$
+```
+ 7
+ ∑ (...) = (...)
+i=1
+```
 
 Les mathématiques avancées sont requis pour les développeurs avancés, et ne concernent pas l'audience de ce livre, mais il est tout de même important a noté que la logique est surement la compétence __la plus importante__ en programmation.
 
 ## 1.7. Les conventions
 
-Les conventions sont une grosse partie des langages de programmation. Elles définissent des règles à suivre, pour homogénéiser le code des différents développeurs. On peut rapporter ce principe à celui des Sciences, qui définit les notations, formules et unitées international, tel que $km.h^{-1}$, ou encore $\sqrt(a^{2} + b^{2})$. 
+Les conventions sont une grosse partie des langages de programmation. Elles définissent des règles à suivre, pour homogénéiser le code des différents développeurs. On peut rapporter ce principe à celui des Sciences, qui définit les notations, formules et unitées international, tel que `km·h⁻¹`, ou encore `√(a² + b²)`. 
 
 Il existe plusieurs types de notations :
  * _UpperCamelCase_ : consiste à mettre en majuscule la première lettre de chaque mot, sans les séparer par un espace. (`BonjourLesAmis`)
@@ -1785,6 +1786,15 @@ from bonjour import hello
 ```
 Nous pouvons donc importer n'importe quelle instance de `bonjour.py`, et l'utilisé sans la classe automatique `bonjour`, comme ceci : `hello()`.
 
+Il est aussi possible d'importer tout le contenu d'un package grâce à `*`:
+
+```python
+from bonjour import *
+
+hello() # marche
+```
+
+
 ### As
 
 `as` permet seulement de renommer l'import à notre guise :
@@ -1797,7 +1807,7 @@ from bonjour import hello as hi
 # hi()
 ```
 
-## 4.3. L'aléatoire
+## 4.2. L'aléatoire
 
 Le seul moyen pour un ordinateur de simulé l'aléatoire est de faire de nombreux calculs,
 avec une `seed`, qui est des valeurs ajoutées aux calculs, et pourront être prédit 
@@ -1864,4 +1874,46 @@ random.choices([1, 2, 3], k=1) # choisit 1 valeur
 
 random.choices([1, 2, 3], (10, 2, 3), k=2) # ajoute les poids, comme dans l'exemple, et choisit 2 valeurs
 ```
-    
+
+## 4.3. Manipulation de fichier
+
+La manipulation de fichier en Python est un processus simple et direct. 
+Il existe plusieurs manières de le faire, dépendant des versions, mais nous allons seulement parler de la plus courante.
+
+```python
+with open(<nom du fichier>, <mode>, <encodage>) as file:
+    pass
+```
+
+Ci-dessus, `open()` ouvrira un fichier et renverra un _objet_ a la variable `file`. N'importe quel extension de fichier est compatible (`.txt`, `.mp4`, `.png`).
+Il existe plusieurs modes :
+ * `r` : _read_, ce mode permet de lire le contenu du fichier.
+ * `w` : _write_, ce mode efface le contenu du fichier, et permet de réécrire par-dessus.
+ * `a` : _append_, ce mode rajoute du contenu au fichier, sans l'effacer.
+ * `r+` : _read+_, ce mode permet de lire le contenu du fichier et de le modifier.
+ * `w+` : _write+_, ce mode permet de réécrire par-dessus le contenu, et de le lire.
+Modes additionnels (ne marche seulement pour `r<mode>` et `w<mode>`):
+ * `t` : _text_ : spécifie que le contenu est du texte.
+ * `b` : _bytes_ : converti le contenu en binaire.
+
+Par exemple, `rb` correspond à _read bytes_, et `wb+` permet d'écrire et de lire en binaire, 
+tout en effaçant son précédent contenu.
+
+```python
+with open("myfile.txt", "r") as file:
+    file.read() # renvoie tout le contenu sous format 'str'
+    file.readline() # renvoie la ligne n, puis fait n+1
+    file.readline(4) # renvoie le caractère numéro 0 au 4 de la ligne actuel.
+    file.readlines() # renvoie toutes les lignes
+    file.readlines(3) # renvoie la ligne n=3
+    file.close() # ferme le fichier
+
+with open("myfile.txt", "w"):
+    file.write("bonjour") # ajoutera 'bonjour' a la fin du fichier, sans retour a la ligne
+    file.writelines("bonjour") # ajoutera 'bonjour' avec retour a la ligne
+```
+
+## 4.4. Les dictionnaires et JSON
+
+Les dictionnaires sont des listes de données, contenant une `clé` et une `valeur`, 
+et permettent de stocker de nombreuses données, souvent .
