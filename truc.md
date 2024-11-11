@@ -84,11 +84,17 @@
     * [4.2.3. random.choices()](#randomchoices)
   * [4.3. Manipulation de fichier](#43-manipulation-de-fichier)
   * [4.4. Les dictionnaires et JSON](#44-les-dictionnaires-et-json)
+    * [4.4.1. Les bases](#les-bases)
+    * [4.4.2. Ajout d'un item](#ajout-dun-item)
+    * [4.4.3. Suppression d'un item](#suppression-dun-item)
+    * [4.4.4. Modification d'un item](#modification-dun-item)
+    * [4.4.4. JSON](#json)
   * 4.5. Les Listes
   * 4.6. Les classes : avancé
     * 4.6.1. Inhéritance
     * 4.6.2. Encapsulation
     * 4.6.3. Polymorphisme
+    * 4.6.4. Abstraction
   * 4.7. Les exceptions
   * 4.8. Les mots clés 
 - __Projet : créer un fichier d'identité avancé__
@@ -131,7 +137,7 @@ Pour commencer, parlons des composants :
 
 ### Mémoire RAM
 
-La mémoire RAM est composé de 2 éléments pour chaque emplacement : l'`adresse` et la `valeur`. En réalité, dans beaucoup de language de programmation, si ce n'est tous, la mémoire utilisé est une `mémoire virtuelle`, qui sera entièrement gérée par le système d'exploitation; celui-ci va alors décider de l'organisation dans la `mémoire physique`. Ce processus permet d'éviter les erreurs de mémoire (exemple : 2 programme qui veulent accéder a la même adresse), et donc ajouté une couche de protection pour l'utilisateur et les applications elles même. 
+La mémoire RA est composé de 2 éléments pour chaque emplacement : l'`adresse` et la `valeur`. En réalité, dans beaucoup de language de programmation, si ce n'est tous, la mémoire utilisé est une `mémoire virtuelle`, qui sera entièrement gérée par le système d'exploitation; celui-ci va alors décider de l'organisation dans la `mémoire physique`. Ce processus permet d'éviter les erreurs de mémoire (exemple : 2 programme qui veulent accéder a la même adresse), et donc ajouté une couche de protection pour l'utilisateur et les applications elles même. 
 
 Prenons ce tableau en exemple :
 
@@ -304,7 +310,7 @@ python -m pip <...args>
 python -m pip3 <...args>
 ```
 
->  [i] &nbsp;  Vérifiez bien que Python et (si possible) `pip` soit dans les variables d'environnement système, 
+>  [ i ] &nbsp;  Vérifiez bien que Python et (si possible) `pip` soit dans les variables d'environnement système, 
 > ou `%PATH%`, afin que la commande puisse être utilisée. 
 > Vous pouvez aussi utiliser la commande directement à partir de l'éxecutable `pip` à partir de son répertoire 
 > comme ceci : ```<chemin_vers_pip> <commande_pip>```, par exemple ```"C:\python312\Scripts\pip.exe" pip --version```.
@@ -378,7 +384,7 @@ sans plan global préétabli._
 L'avantage des langages de programmation interprété se résume généralement sur le confort d'utilisation. Ceux-ci ont tendance à être plus simple à apprendre et à manier, mais sont plus lent à execute ou à `debugger` car le programme est exécuté au fur et à mesure, sans savoir l'instruction suivante. Il ce peut donc que votre programme ait une erreur après plusieurs minutes de lancement, car une instruction n'avait pas été atteinte jusqu'alors.
 A noté que ces langages ont un accès très limité sur l'infrastructure de l'ordinateur, puisqu'une majeure partie est gérée par l'interpreter. Cela aussi fait d'eux des langages lents et peu performants à cause du passage à travers l'interpreter. 
 
->  [i] &nbsp;  _Javascript_, _PHP_, et _Ruby_ sont tous les trois des langages de programmation interprétée.
+>  [ i ] &nbsp;  _Javascript_, _PHP_, et _Ruby_ sont tous les trois des langages de programmation interprétée.
 
 ### Langage compilé
 
@@ -397,7 +403,7 @@ Ensuite, une fois que tout est prêt, les ouvriers suivent ces plans pour constr
 Dans un langage compilé, le code est d'abord traduit entièrement en langage machine (les plans complets), 
 puis exécuté par l'ordinateur._
 
-> [i] &nbsp; Beaucoup de langages de programmation sont compilé, on peut y retrouver notamment _C_, _Rust_ et _GoLang_.
+> [ i ] &nbsp; Beaucoup de langages de programmation sont compilé, on peut y retrouver notamment _C_, _Rust_ et _GoLang_.
 
 ### Langage byte-code
 
@@ -415,7 +421,7 @@ Avant de commencer la construction, les ouvriers utilisent un manuel spécialis�
 C'est ainsi que fonctionne le bytecode : le code est traduit en une forme intermédiaire, 
 puis un interprète (machine virtuelle) le traduit pour l'ordinateur spécifique._
 
->  [i] &nbsp; Peu de langages de programmation utilisent cette technique, et les plus populaires sont _Java_ et _C# (à prononcer "C Sharp")_.
+>  [ i ] &nbsp; Peu de langages de programmation utilisent cette technique, et les plus populaires sont _Java_ et _C# (à prononcer "C Sharp")_.
 
 
 ### Comparaison
@@ -441,7 +447,7 @@ qui peut être employé seulement avec les langages qui supportent la définitio
 Le concept consiste à préciser le type de chaque variable, afin d'éviter les erreurs relaté à la mauvaise assignation de type, etc.
 Par exemple : `variable1 = 123`, reviendrait à `variable1 : nombre = 123`.
 
->  [i] &nbsp; Les langages tels que _Python_, _TypeScript_, _JavaScript_ et _PHP_ supporte les 2 styles.
+>  [ i ] &nbsp; Les langages tels que _Python_, _TypeScript_, _JavaScript_ et _PHP_ supporte les 2 styles.
 
 ### Types statiques
 
@@ -831,7 +837,7 @@ Les valeurs passées dans print, peuvent être séparé par des virgules, ou des
 Les virgules mettront automatiquement un espace entre le texte précédent et le suivant, 
 tandis que l'opérateur `+` les ajoutera à la suite.
 
-> [i] &nbsp; Les valeurs ajoutées avec `+` doivent d'abord être converti en `string`, pour cela, il faut seulement faire `str(<valeur>)`.
+> [ i ] &nbsp; Les valeurs ajoutées avec `+` doivent d'abord être converti en `string`, pour cela, il faut seulement faire `str(<valeur>)`.
 
 
 Il existe un autre moyen d'intégrer une variable dans une chaine de caractères comme ceci :
@@ -1004,12 +1010,12 @@ Affichera
 7
 ```
 
-> [i] &nbsp; `start` atteindra au maximum `objective-1`.
+> [ i ] &nbsp; `start` atteindra au maximum `objective-1`.
 
 
 
 Il est aussi possible de `loop` à l'intérieur d'une variable. Pour cela, il faut remplacer `range()` par la variable.
-> [i] &nbsp; Certain type ne sont pas compatible avec les boucles.
+> [ i ] &nbsp; Certain type ne sont pas compatible avec les boucles.
 
 ```python
 for i in ["s", "a", "l", "u", "t"]:
@@ -1026,7 +1032,7 @@ t
 
 Cela aurait aussi pu marcher avec une variable de type `str`, ou `tuple` par exemple.
 
-> [i] &nbsp; Les variables par défaut utilisé dans les `for-loop` sont i, puis j, en deuxième. 
+> [ i ] &nbsp; Les variables par défaut utilisé dans les `for-loop` sont i, puis j, en deuxième. 
 > Il est possible de changer le nom de ces variables si besoin. Si la variable ne compte pas être utilisé, on l'appellera (par convention) `_`.
 
 
@@ -1342,7 +1348,7 @@ Hello!
 Afin de passer des paramètres, aussi appellés arguments, on peut les mettre dans les parenthèses, par leurs noms.
 On peut aussi leur assigner une valeur par défaut, qui changera seulement si l'utilisateur le décide.
 
-> [i] &nbsp; Les paramètre par défaut doivent OBLIGATOIREMENT être déclaré à la suite des variables !
+> [ i ] &nbsp; Les paramètre par défaut doivent OBLIGATOIREMENT être déclaré à la suite des variables !
 
 ```python
 def say_hello(name: str):
@@ -1452,7 +1458,7 @@ chien = Chiens :
 chien -> aboie
 ```
 
-> [i] &nbsp; Une classe sera automatiquement interprété en tant que type !
+> [ i ] &nbsp; Une classe sera automatiquement interprété en tant que type !
 
 
 Les classes sont utilisées dans deux contextes différents : 
@@ -1734,7 +1740,7 @@ ids = create_id(4)
 print(ids)
 ```
 
-> [i] N'oubliez pas qu'aucunes des variables ne peut être _null_ !
+> [ i ] N'oubliez pas qu'aucunes des variables ne peut être _null_ !
 
 <details>
     <summary>
@@ -1915,5 +1921,80 @@ with open("myfile.txt", "w"):
 
 ## 4.4. Les dictionnaires et JSON
 
-Les dictionnaires sont des listes de données, contenant une `clé` et une `valeur`, 
-et permettent de stocker de nombreuses données, souvent .
+Les dictionnaires sont des listes de données, contenant une `clé`, permettant à accéder à la `valeur`.
+Ils sont caractérisés par des accolades, et les `clé` sont **obligatoirement** des `str`.
+
+### Les bases
+
+```python
+my_dict: dict = {
+    "lastname": "L.",
+    "firstname": "Clément",
+    "age": 17
+}
+```
+
+Ici, le dictionnaire `my_dict` a pour clé `lastname`, `firstname` et `age`, 
+qui chacun contienne une valeur (`lastname` contient `L.`, etc.).
+
+Afin d'accéder à ces valeurs, il faut utiliser la clé correspondante comme cela :
+
+```python
+print(my_dict["lastname"]) # L.
+print(my_dict["age"]) # 17
+```
+
+Ici, lorsque plusieurs dictionnaires sont "emboités", quelques étapes supplémentaires, 
+sont requise pour accéder à l'`age`.
+
+```python
+parent_dictionary: dict = {
+    "children_dictionnary" : {
+        "age": 9822
+    }
+}
+```
+```python
+parent_dictionary["children_dictionnary"]["age"] # accède a l'age
+```
+
+### Ajout d'un item
+
+Pour ajouter une variable, il suffit seulement d'assigner à une clé une valeur :
+
+```python
+my_dict: dict = {} # vide
+
+my_dict["phrase_de_salutation"] = "Salut tout le monde!"
+
+print(my_dict["phrase_de_salutation"]) # Salut tout le monde!
+```
+
+> [ i ] Attention, cela remplacera la valeur si elle existe déjà
+
+### Suppression d'un item
+
+### Modification d'un item
+
+Similairement à l'ajout d'un item, nous pouvons le modifier en assignant la valeur voulut.
+
+```python
+person: dict = {
+    "name": "Fred",
+    "age": 87
+}
+
+print(person) # {'name': 'Fred', 'age': 87}
+
+person["age"] += 1
+
+print(person) # {'name': 'Fred', 'age': 88}
+```
+
+### JSON
+
+Ces types de données sont extrêmement similaire au JSON (JavaScript Object Notation), 
+qui est utilisé dans le web, généralement lors d'utilisation de [Web REST API](https://www.redhat.com/fr/topics/api/what-is-a-rest-api).
+
+Pour manipuler des données / fichiers en JSON, nous allons utiliser la librairie par défaut `json`.
+

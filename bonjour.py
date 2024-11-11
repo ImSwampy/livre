@@ -1,9 +1,10 @@
-import random
+person: dict = {
+    "name": "Fred",
+    "age": 87
+}
 
-def hello():
-    return random.choices(["salut", "bo", "gosse", "mange", "mon", "zob"], k=2)
+print(person)
 
-def random_choice(l: list or str):
-    return l[random.randint(0, len(l)-1)]
+person["age"] += 1
 
-print(random_choice("jqksdhqjishd"))
+print(person)
