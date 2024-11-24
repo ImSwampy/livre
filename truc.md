@@ -84,11 +84,12 @@
     * [4.2.3. random.choices()](#randomchoices)
   * [4.3. Manipulation de fichier](#43-manipulation-de-fichier)
   * [4.4. Les dictionnaires et JSON](#44-les-dictionnaires-et-json)
-    * [4.4.1. Les bases](#les-bases)
-    * [4.4.2. Ajout d'un item](#ajout-dun-item)
-    * [4.4.3. Suppression d'un item](#suppression-dun-item)
-    * [4.4.4. Modification d'un item](#modification-dun-item)
-    * [4.4.4. JSON](#json)
+    * [4.4.1. Les Dictionnaires]
+      * [4.4.1.1. Les bases](#les-bases)
+      * [4.4.1.2. Ajout d'un item](#ajout-dun-item)
+      * [4.4.1.3. Suppression d'un item](#suppression-dun-item)
+      * [4.4.1.4. Modification d'un item](#modification-dun-item)
+    * [4.4.2. JSON](#json)
   * 4.5. Les Listes
   * 4.6. Les classes : avancé
     * 4.6.1. Inhéritance
@@ -1993,8 +1994,11 @@ print(person) # {'name': 'Fred', 'age': 88}
 
 ### JSON
 
-Ces types de données sont extrêmement similaire au JSON (JavaScript Object Notation), 
-qui est utilisé dans le web, généralement lors d'utilisation de [Web REST API](https://www.redhat.com/fr/topics/api/what-is-a-rest-api).
+Le JSON (JavaScript Object Notation), est utilisé dans le web, 
+généralement lors d'utilisation de [Web REST API](https://www.redhat.com/fr/topics/api/what-is-a-rest-api).
+Il est très similaire aux dictionnaires dans son fonctionnement, et ont beaucoup d'usage dans le domaine web,
+ainsi que pour les petites bases de données, qui ne seront pas souvent modifiées.
 
 Pour manipuler des données / fichiers en JSON, nous allons utiliser la librairie par défaut `json`.
+
 

@@ -1,5 +1,19 @@
-line_number = 2  # Choose the line you want to read
+def factorial(n):
+    result = 1
+    for i in range(2, n + 1):
+        result *= i
+    return result
 
-with open("myfile.txt", "a") as file:
-    print(file.writable())
-    file.writelines(["123", "456", "789"])
+
+def euler(n: int) -> float:
+    result = 1.0
+    factorial = 1
+
+    for i in range(1, n):
+        factorial *= i
+        result += 1 / factorial
+
+    return result
+
+
+print(euler(1_000_000_000))
